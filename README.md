@@ -12,25 +12,41 @@ This Program is a symbolic algebra calculator. This is a program that reads in m
 The calculator program will read from cin and write to cout. It won't prompt a user for input, but it will echo its input to cout. This way, its output will be more suitable for non-interactive use (which is how it will be tested), with only a small decrease in interactive usability. So, for example, if the input to your program were:
 
 5 + 7
+
 x := 1
+
 x + 8
+
 z := x + y
+
 y := 8
+
 z
 
 its output would be:
 
 in  [1]: 5 + 7
+
 out [1]: 12
+
 in  [2]: x := 1
+
 out [2]: 1
+
 in  [3]: x + 8
+
 out [3]: 9
+
 in  [4]: z := x + y
+
 out [4]: 1 + y
+
 in  [5]: y := 8
+
 out [5]: 8
+
 in  [6]: z
+
 out [6]: 9
 
 It Is Assumed that each input expression is on a single line.
