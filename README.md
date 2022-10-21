@@ -9,7 +9,7 @@ Learning Goals
 
 This Program is a symbolic algebra calculator. This is a program that reads in mathematical (algebraic) expressions and represents them in an internal data structure so that they can be manipulated — i.e., simplified, solved, or transformed. 
 
-The calculator program will read from cin and write to cout. It won't prompt a user for input, but it will echo its input to cout. This way, its output will be more suitable for non-interactive use (which is how it will be tested), with only a small decrease in interactive usability. So, for example, if the input to your program were:
+The calculator program will read from cin and write to cout. It won't prompt a user for input, but it will echo its input to cout. This way, its output will be more suitable for non-interactive use (which is how it will be tested), with only a small decrease in interactive usability. So, for example, if the input to the program were:
 
 5 + 7
 
@@ -77,3 +77,10 @@ More Input Examples and Information
 * calculator should output reasonable error messages for any syntax errors and continue to take input with the next line.
 
 * If a variable has had no expression assigned to it, its value is just itself. In other words, if an input is q, and that variable had no expression previously assigned to it, then the output from your program is its default value: q. This might imply that you initialize all variables to have the value of an expression that is just that variable.
+
+Implementation
+
+1. "Wrap" a tokenizer object around the input stream. This way, instead of reading characters from the stream, it will read tokens
+2. Read tokens from the input and use them to convert the input infix expression to postfix
+3. Use the postfix expression to assemble an AST. If the expression includes an assignment, perform that immediately, rather than including it in the AST. 
+4. Evaluate the expression, which would include evaluating the expression(s) for any variable(s) that have expressions stored for them, and output the final simplified value (which could be numerical or symbolic).
